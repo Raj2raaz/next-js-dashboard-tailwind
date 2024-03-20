@@ -34,5 +34,5 @@ const MarketStories = () => {
   )
 }
 
-export default MarketStories
+export default MarketStories;
 
