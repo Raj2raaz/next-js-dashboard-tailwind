@@ -1,4 +1,5 @@
-import React from "react";
+"use client"; 
+import React, {useState} from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
@@ -13,11 +14,19 @@ import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CompressIcon from '@mui/icons-material/Compress';
 
 const SideNavbar = () => {
+
+  const  [openMenu, setOpenMenu] = useState(true);
+
+  const toggleOpenMenu = () => {
+    setOpenMenu(!openMenu);
+  }
+
+
   return (
     // <div className='flex-none w-200 bg-gray-50 h-screen text-black'>
     <>
       <div
-        className="flex-none bg-purple-800 h-screen text-white"
+        className={`flex-none ${openMenu ? "block" : "hidden"} bg-purple-800 h-screen text-white`}
         style={{ width: "250px", alignItems: "center" }}
       >
         <div className="flex justify-between px-6 py-14 items-center border-b">
@@ -66,7 +75,7 @@ const SideNavbar = () => {
         </ul>
       </div>
       <div className='flex w-200 bg-gray-50 h-screen text-black items-center justify-center'>
-        <div className="h-20 bg-purple-400 text-whitee items-center justify-center flex">
+        <div onClick={toggleOpenMenu} className="h-20 bg-purple-400 text-whitee items-center justify-center flex">
           <CompressIcon style={{ transform: 'rotate(90deg)' }} />
         </div>
       </div>
