@@ -14,38 +14,10 @@ import ShareIcon from '@mui/icons-material/Share';
 
 const DisscussionFourm = () => {
   return (
-    <div>
+    <div className="px-8 py-8">
       <h2 className="text-lg font-bold mb-4">Discussion Forum</h2>
-      {discussion.map((discussion) => (
-        // <div key={discussion.id} className="flex items-center border-b py-4">
-        //   {/* Image */}
-        //   <img
-        //     src={discussion.image}
-        //     alt={discussion.title}
-        //     className="w-16 h-16 rounded-full mr-4"
-        //   />
-        //   <div>
-        //     {/* Title */}
-        //     <h3 className="text-lg font-semibold">{discussion.title}</h3>
-        //     {/* Content */}
-        //     <p className="text-gray-600">{discussion.content}</p>
-        //       <div className="flex mt-4">
-                
-        //         <p className="mr-5 "><FavoriteBorderIcon/> {discussion.like}</p>
-        //         <p className="mr-5 "><VisibilityIcon/> {discussion.view}</p>
-        //         <p className="mr-5 "><ChatBubbleOutlineIcon/>{discussion.comment}</p>
-        //         <p className="mr-5 "><ShareIcon/> Share</p>
-
-        //       </div>
-            
-        //   </div>
-        //   <div>
-        //     {/* Time */}
-        //     <p className="text-gray-400">{discussion.time}</p>
-        //   </div>
-        // </div>
-        
-        <Card key={discussion.id} sx={{ maxWidth: 650, marginBottom: '20px' }} >
+      {discussion.map((discussion) => (  
+        <Card key={discussion.id} sx={{ maxWidth: 900, marginBottom: '20px' }} >
           <CardActionArea>
             <CardContent className="flex">
             <img
@@ -60,10 +32,10 @@ const DisscussionFourm = () => {
             <p className="text-gray-600">{discussion.content}</p>
               <div className="flex mt-4">
                 
-                <p className="mr-5 "><FavoriteBorderIcon/> {discussion.like}</p>
-                <p className="mr-5 "><VisibilityIcon/> {discussion.view}</p>
-                <p className="mr-5 "><ChatBubbleOutlineIcon/>{discussion.comment}</p>
-                <p className="mr-5 "><ShareIcon/> Share</p>
+                <p className="mr-7 "><FavoriteBorderIcon/> <span className="ml-1">{discussion.like}</span></p>
+                <p className="mr-7 "><VisibilityIcon/> <span className="ml-1">{discussion.view}</span></p>
+                <p className="mr-7 "><ChatBubbleOutlineIcon/><span className="ml-2">{discussion.comment}</span></p>
+                <p className="mr-7 "><ShareIcon/> <span className="ml-2">Share </span></p>
 
               </div>
             

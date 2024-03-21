@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 
 const MarketStories = () => {
   return (
-    <div>
+    <div className="px-8 py-8 h-screen">
       <h2 className="text-lg font-bold mb-4">Market Stories</h2>
       {marketStories.map((story) => (
         <Card  key={story.id} sx={{ maxWidth: 250, marginBottom: '20px' }}>
