@@ -26,7 +26,7 @@ const SideNavbar = () => {
     // <div className='flex-none w-200 bg-gray-50 h-screen text-black'>
     <>
       <div
-        className={`flex-none ${openMenu ? "block" : "hidden"} bg-purple-800 h-screen text-white`}
+        className={`flex-none ${openMenu ? "block" : "hidden"} bg-purple-800 h-screen text-white transition-all duration-500 ease-in-out`}
         style={{ width: "250px", alignItems: "center" }}
       >
         <div className="flex justify-between px-6 py-14 items-center border-b">
@@ -75,7 +75,7 @@ const SideNavbar = () => {
         </ul>
       </div>
       <div className='flex w-200 bg-gray-50 h-screen text-black items-center justify-center'>
-        <div onClick={toggleOpenMenu} className="h-20 bg-purple-400 text-whitee items-center justify-center flex">
+        <div onClick={toggleOpenMenu} className="h-20 bg-purple-400 text-whitee items-center justify-center flex transition-all duration-500 ease-in-out">
           <CompressIcon style={{ transform: 'rotate(90deg)' }} />
         </div>
       </div>

@@ -3,6 +3,7 @@ import MarketStories from "./components/MarketStories";
 import SideNavbar from "./components/SideNavbar";
 
 export default function Home() {
+ 
   return (
     <div className="flex h-screen "  >
       <SideNavbar className="fixed left-0 top-0 h-full "/>
@@ -13,5 +14,6 @@ export default function Home() {
       </div>
       </div>
     </div>
+  
   );
 }
